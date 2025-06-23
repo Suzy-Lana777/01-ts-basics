@@ -8,11 +8,11 @@ interface Post {
 
 async function fetchPosts(): Promise<Post[]> {
   const response = await axios.get<Post[]>(
-    'https://jsonplaceholder.typicode.com/posts', // ✅ правильний URL
+    'https://jsonplaceholder.typicode.com/posts',
   );
   return response.data;
 }
 
 fetchPosts().then((posts) => {
-  console.log(posts[0].title); // ✅ має вивести "sunt aut facere..." або подібний заголовок
+  console.log(posts[0].title);
 });
