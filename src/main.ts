@@ -1,15 +1,7 @@
-import './style.css';
-import typescriptLogo from './typescript.svg';
-import viteLogo from '/vite.svg';
-
-import './task-1';
-import './task-2';
-import './task-3';
-import './task-4';
-import './task-5';
-import './task-6';
-import './task-7';
-import './task-8';
+import './style.css'
+import typescriptLogo from './typescript.svg'
+import viteLogo from '/vite.svg'
+import { setupCounter } from './counter.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -27,4 +19,6 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       Click on the Vite and TypeScript logos to learn more
     </p>
   </div>
-`;
+`
+
+setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
